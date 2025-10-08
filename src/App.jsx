@@ -8,6 +8,7 @@ import {SignIn} from './pages/SignIn'
 import {Home} from './pages/Home'
 import {SendMoney} from './pages/SendMoney'
 import {UpdateInfo} from './pages/UpdateInfo'
+import { WelcomePage } from './pages/WelcomePage.jsx'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     
     <BrowserRouter>
     <Routes>
+      <Route path='/' element={<WelcomePage />}></Route>
       <Route path='/signup' element={<SignUp />}></Route>
       <Route path='/signin' element={<SignIn />}></Route>
       <Route path="/home" element={ <Home/>}/>
@@ -25,7 +27,7 @@ function App() {
     </Routes>
     </BrowserRouter>
 
-    <h1>this is jTM </h1>
+    
       
       
   </div>

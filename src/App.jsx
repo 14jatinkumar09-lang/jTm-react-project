@@ -24,6 +24,8 @@ function App() {
       <Route path="/updateProfile" element={ <UpdateInfo/>}/>
     </Routes>
     </BrowserRouter>
+
+    <h1>this is jTM </h1>
       
       
   </div>

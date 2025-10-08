@@ -37,7 +37,7 @@ export function SignUp() {
                 lastName ,
                 password 
             })
-            console.log(response.data.msg) ;
+            alert(response.data.msg) ;
             
             navigate("/signin") ;
         }} label={"Sign up"}></Button>

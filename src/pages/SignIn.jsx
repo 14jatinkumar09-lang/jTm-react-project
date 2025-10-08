@@ -30,7 +30,7 @@ export function SignIn() {
                 password
             })
             if (res.status === 404) {
-                console.log("user_NotFound");
+                alert("user_NotFound");
                 window.reload() ;
             }
             else if (res.status===200) {

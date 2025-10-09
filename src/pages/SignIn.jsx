@@ -25,19 +25,28 @@ export function SignIn() {
             setPassword(e.target.value);
         }} label={"Password"} placeholder={"123Abc"} type="text"></InputBox><PasswordToggle />
         <Button onClick={async () => {
-            let res = await axios.post(`${url}/signin`, {
+            try {
+                let res = await axios.post(`${url}/signin`, {
                 userId,
                 password
             })
-            if (res.status===404) {
-                alert("user_NotFound");
-                
-            }
-            else {
                 localStorage.setItem('token', res.data.token);
                 localStorage.setItem('userName', res.data.username);
                 navigate("/home");
+                
             }
+                catch (error) {
+                alert("user_NotFound");
+                }
+            
+        
+            // if (res.status===404) {
+                
+                
+            // }
+            // else {
+                
+            // }
             
 
             

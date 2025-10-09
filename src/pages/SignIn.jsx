@@ -29,7 +29,7 @@ export function SignIn() {
                 userId,
                 password
             })
-            if (!res.status===200) {
+            if (res.status===404) {
                 alert("user_NotFound");
                 
             }

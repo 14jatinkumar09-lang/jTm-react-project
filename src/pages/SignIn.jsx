@@ -33,8 +33,8 @@ export function SignIn() {
                if (res.status===200) {
                  localStorage.setItem('token', res.data.token);
                 localStorage.setItem('userName', res.data.username);
-                navigate("/home");
             }
+                navigate("/home");
                 
             }//try
                 catch (error) {

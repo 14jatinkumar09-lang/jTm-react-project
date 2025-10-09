@@ -39,7 +39,7 @@ export function SignIn() {
             }//try
                 catch (error) {
                     if(error.response.status === 404 ) {
-                alert(res.data.msg);
+                alert(response.data.msg);
                         
                     }
                 }

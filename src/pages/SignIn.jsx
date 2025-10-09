@@ -30,7 +30,7 @@ export function SignIn() {
                 userId,
                 password
             })
-               if (res.status===404) {
+               if (res.status===200) {
                  localStorage.setItem('token', res.data.token);
                 localStorage.setItem('userName', res.data.username);
                 navigate("/home");

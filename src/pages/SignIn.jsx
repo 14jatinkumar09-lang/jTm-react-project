@@ -30,20 +30,22 @@ export function SignIn() {
                 userId,
                 password
             })
-                localStorage.setItem('token', res.data.token);
+               if (res.status===404) {
+                 localStorage.setItem('token', res.data.token);
                 localStorage.setItem('userName', res.data.username);
                 navigate("/home");
-                
             }
+                
+            }//try
                 catch (error) {
-                alert("user_NotFound");
+                    if(error.response.status === 404 ) {
+                alert(res.data.msg);
+                        
+                    }
                 }
             
         
-            // if (res.status===404) {
-                
-                
-            // }
+            
             // else {
                 
             // }

@@ -29,15 +29,14 @@ export function SignIn() {
                 userId,
                 password
             })
-            if (res.status===200) {
+            if (!res.status===200) {
+                alert("user_NotFound");
+                
+            }
+            else {
                 localStorage.setItem('token', res.data.token);
                 localStorage.setItem('userName', res.data.username);
                 navigate("/home");
-            }
-            else {
-
-                alert("user_NotFound");
-                window.reload() ;
             }
             
 

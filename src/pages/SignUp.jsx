@@ -18,7 +18,7 @@ export function SignUp() {
         
         <Heading label={"Sign up"}></Heading>
         <SubHeading label={"Enter your information to create an account"}></SubHeading>
-        <InputBox onchange={(element)=>{
+        <InputBox onchange={(e)=>{
             setFirstName(e.target.value) ;
         }} label={"First Name"} placeholder={"John"} type={"text"} />
         <InputBox onChange={(e)=> {
